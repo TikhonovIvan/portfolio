@@ -1,164 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мое портфолио </title>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body class="">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мое портфолио</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@mariohamann/activity-graph/dist/activity-graph.min.js"
+    ></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="">
     <div class="container">
-
-        <!-- NavBar -->
-        <nav class="navbar">
-            <div class="box theme">
-                <div class="item">
-                    <ion-icon name="sunny-outline"></ion-icon>
-                </div>
-            </div>
-            <div class="box nav">
-                <div class="item active">
-                    <a href="#about">
-                        <ion-icon name="person-circle-outline"></ion-icon>
-                        <p>about</p>
-                    </a>
-                    <div class="divider ltr">
-
-                    </div>
-                </div>
-                <div class="item ">
-                    <a href="#resume">
-                        <ion-icon name="file-tray-full-outline"></ion-icon>
-                        <p>resume</p>
-                    </a>
-                    <div class="divider ltr">
-
-                    </div>
-                </div>
-                <div class="item ">
-                    <a href="#project">
-                       <ion-icon name="file-tray-stacked-outline"></ion-icon>
-                        <p>project</p>
-                    </a>
-                    <div class="divider ltr">
-
-                    </div>
-                </div>
-                <div class="item ">
-                    <a href="#blogs">
-                        <ion-icon name="reader-outline"></ion-icon>
-                        <p>blogs</p>
-                    </a>
-                    <div class="divider ltr">
-
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="contact">
-                        <ion-icon name="newspaper-outline"></ion-icon>
-                        <p>contact</p>
-                    </a>
-                    
-                </div>
-            </div>
-        </nav>
-
-
-        <!-- Profile  -->
-        <div class="box profile">
-            <img class="header" src="./img/cover.jpg" alt="">
-            <img class="img" src="./img/wp5146890.jpg" alt="">
-            <h2>Тихонов Иван</h2>
-            <p class="colored">PHP Laravel Developer</p>
-
-
-            <ul>
-                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                <li><a href="#"><ion-icon name="logo-github"></ion-icon></a></li>
-                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                <li><a href="#"></a><ion-icon name="logo-twitter"></ion-icon></li>
-            </ul>
-
-            <div class="footer">
-                <div class="divider ltr"></div>
-                <table>
-                    <tr>
-                        <td><a href="">Моё резюме <ion-icon name="file-tray-full-outline"></ion-icon></a></td>
-                        <td><a href="">Мои контакты <ion-icon name="call-outline"></ion-icon></a></td>
-                    </tr>
-                </table>
-            </div>
-                   
+      <!-- NavBar -->
+      <nav class="navbar">
+        <div class="box theme">
+          <div class="item" onclick="theme()">
+            <ion-icon id="lightBtn" name="sunny-outline"></ion-icon>
+            <ion-icon
+              id="darkBtn"
+              name="moon-outline"
+              style="display: none"
+            ></ion-icon>
+          </div>
         </div>
-
-
-        <!-- Contact -->
-        <div class="box content">
-            <h2>Привет <span class="colored">друг! </span>&#128075; </h2>
+        <div class="box nav">
+          <div class="item active">
+            <a href="#about">
+              <ion-icon name="person-circle-outline"></ion-icon>
+              <p>about</p>
+            </a>
             <div class="divider ltr"></div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime consequuntur perspiciatis debitis repellendus, deleniti sed rerum voluptatibus consectetur accusantium, eaque nisi earum. Ullam tempore quae consequatur libero molestias, eius labore.
-            <span class="colored">Error enim voluptatibus</span> est itaque sequi consectetur et magni fuga, facilis labore harum voluptates sint iste dolorum amet porro optio odit fugit autem suscipit, recusandae ipsa modi, facere id. Ullam!
-            </p>
-
-
-            <!-- Achivements -->
-            <section class="achivements">
-                <div>
-                    <h3><ion-icon name="layers-outline"></ion-icon>50+</h3>
-                    <p>Дизайнер сайтов</p>
-                </div>
-                 <div>
-                    <h3><ion-icon name="briefcase-outline"></ion-icon>3+</h3>
-                    <p>Года опты</p>
-                </div>
-                 <div>
-                    <h3><ion-icon name="rocket-outline"></ion-icon>40</h3>
-                    <p>Завершенных проектов</p>
-                </div>
-            </section>
-
-            <!-- Skills -->
-             <h2>Мой <span class="colored"> Skills</span></h2>
-             <div class="divider ltr"></div>
-
-             <section class="skills">
-                <div><ion-icon name="logo-html5"></ion-icon><p>HTML5</p></div>
-                <div><ion-icon name="logo-css3"></ion-icon><p>CSS</p></div>
-                <div><ion-icon name="logo-css3"></ion-icon><p>JS</p></div>
-                <div><ion-icon name="logo-laravel"></ion-icon><p>Laravel</p></div>
-
-                <div>
-                    <div class="circle" style="--percent:65%">
-                        <h4> 65<small>%</small></h4>
-
-                    </div>
-                    <p>MySQL</p>
-                </div>
-                <div>
-                    <div class="circle" style="--percent:50%">
-                        <h4> 85<small>%</small></h4>
-
-                    </div>
-                    <p>MySQL</p>
-                </div>
-                <div>
-                    <div class="progress-bar">
-                    <p>Node JS <span>90%</span></p>
-                    <progress max="100" value="90"></progress>
-                    </div>
-                    <div class="progress-bar">
-                    <p>Laravel <span>75%</span></p>
-                    <progress max="100" value="75"></progress>
-                    </div>
-                </div>
-                
-              
-             </section>
+          </div>
+          <div class="item">
+            <a href="#resume">
+              <ion-icon name="file-tray-full-outline"></ion-icon>
+              <p>resume</p>
+            </a>
+            <div class="divider ltr"></div>
+          </div>
+          <div class="item">
+            <a href="#project">
+              <ion-icon name="file-tray-stacked-outline"></ion-icon>
+              <p>project</p>
+            </a>
+            <div class="divider ltr"></div>
+          </div>
+          <div class="item">
+            <a href="#blogs">
+              <ion-icon name="reader-outline"></ion-icon>
+              <p>blogs</p>
+            </a>
+            <div class="divider ltr"></div>
+          </div>
+          <div class="item">
+            <a href="contact">
+              <ion-icon name="newspaper-outline"></ion-icon>
+              <p>contact</p>
+            </a>
+          </div>
         </div>
-        
+      </nav>
+
+      <!-- Profile  -->
+      <div class="box profile">
+        <img class="header" src="./img/cover.jpg" alt="" />
+        <img class="img" src="./img/wp5146890.jpg" alt="" />
+        <h2>Тихонов Иван</h2>
+        <p id="typed" class="colored">PHP Laravel Developer</p>
+
+        <ul>
+          <li>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="logo-github"></ion-icon></a>
+          </li>
+          <li>
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+          </li>
+          <li><a href="#"></a><ion-icon name="logo-twitter"></ion-icon></li>
+        </ul>
+
+        <div class="footer">
+          <div class="divider ltr"></div>
+          <table>
+            <tr>
+              <td>
+                <a href=""
+                  >Моё резюме <ion-icon name="file-tray-full-outline"></ion-icon
+                ></a>
+              </td>
+              <td>
+                <a href=""
+                  >Мои контакты <ion-icon name="call-outline"></ion-icon
+                ></a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="box content">
+        <div class="wrapper">
+          <h2>Привет <span class="colored">друг! </span>&#128075;</h2>
+          <div class="divider ltr"></div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime
+            consequuntur perspiciatis debitis repellendus, deleniti sed rerum
+            voluptatibus consectetur accusantium, eaque nisi earum. Ullam
+            tempore quae consequatur libero molestias, eius labore.
+            <span class="colored">Error enim voluptatibus</span> est itaque
+            sequi consectetur et magni fuga, facilis labore harum voluptates
+            sint iste dolorum amet porro optio odit fugit autem suscipit,
+            recusandae ipsa modi, facere id. Ullam!
+          </p>
+
+          <!-- Achivements -->
+          <section class="achivements">
+            <div>
+              <h3><ion-icon name="layers-outline"></ion-icon>50+</h3>
+              <p>Дизайнер сайтов</p>
+            </div>
+            <div>
+              <h3><ion-icon name="briefcase-outline"></ion-icon>3+</h3>
+              <p>Года опты</p>
+            </div>
+            <div>
+              <h3><ion-icon name="rocket-outline"></ion-icon>40</h3>
+              <p>Завершенных проектов</p>
+            </div>
+          </section>
+
+          <!-- Skills -->
+          <h2>Мой <span class="colored"> Skills</span></h2>
+          <div class="divider ltr"></div>
+
+          <section class="skills">
+            <div>
+              <ion-icon name="logo-html5"></ion-icon>
+              <p>HTML5</p>
+            </div>
+            <div>
+              <ion-icon name="logo-css3"></ion-icon>
+              <p>CSS</p>
+            </div>
+            <div>
+              <ion-icon name="logo-css3"></ion-icon>
+              <p>JS</p>
+            </div>
+            <div>
+              <ion-icon name="logo-laravel"></ion-icon>
+              <p>Laravel</p>
+            </div>
+
+            <div>
+              <div class="circle" style="--percent: 65%">
+                <h4>65<small>%</small></h4>
+              </div>
+              <p>MySQL</p>
+            </div>
+            <div>
+              <div class="circle" style="--percent: 50%">
+                <h4>85<small>%</small></h4>
+              </div>
+              <p>MySQL</p>
+            </div>
+            <div>
+              <div class="progress-bar">
+                <p>Node JS <span>90%</span></p>
+                <progress max="100" value="90"></progress>
+              </div>
+              <div class="progress-bar">
+                <p>Laravel <span>75%</span></p>
+                <progress max="100" value="75"></progress>
+              </div>
+            </div>
+          </section>
+
+          <!-- Experience -->
+          <h1>My <span class="colored">Experience</span></h1>
+          <div class="divider ltr"></div>
+          <section class="experience">
+            <div class="experience">
+              <h2>Middel PHP Developer</h2>
+              <h4>
+                Google Inc. <span class="date">Oct. 2018</span> -
+                <span class="date"> Dec. 2019</span>
+              </h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, enim.
+              </p>
+            </div>
+            <div class="experience">
+              <h2>Middel PHP Developer</h2>
+              <h4>Google Inc.</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, enim.
+              </p>
+            </div>
+            <div class="experience">
+              <h2>Middel PHP Developer</h2>
+              <h4>Google Inc.</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptate, enim.
+              </p>
+            </div>
+          </section>
+
+          <!-- Contributions -->
+          <div class="none">
+            <h1>My <span class="colored">Contributions</span></h1>
+            <div class="divider ltr"></div>
+
+            <section class="contributions">
+              <div class="wrapper">
+                <activity-graph
+                  range-start="2021-01-01"
+                  range-end="2021-12-31"
+                  activity-levels="0,1,2,3,5"
+                  activity-data="2021-01-01,2021-01-02,2021-01-03, ,2021-02-03,2021-04-03"
+                ></activity-graph>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
     </div>
-    
-</body>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>

@@ -13,6 +13,7 @@ body{
     --accent-02: #98B1BA;
     --accent-03: #26333A;
     --accent-04: #1A2328;
+  
 
     font-family: Calibri, sans-serif;
     margin: 0;
@@ -24,10 +25,14 @@ body{
     color: var(--accent-01);
 }
 
+.none{
+    display: none;
+}
+
 body.light{
     --primary-color: #4fc6ce;
     --accent-01: #1D3A41;
-    --accent-02: #98B1BA;
+    --accent-02: #32393b;
     --accent-03: #FFFFFF;
     --accent-04: #D5F3F9;
 }
@@ -39,6 +44,8 @@ body.light{
     padding: 50px ;
     margin: 0 auto;
 }
+
+
 
 
 .box{
@@ -193,6 +200,28 @@ color: var(--primary-color);
 
 }
 
+.content .wrapper{
+    overflow: auto;
+    max-height: 600px;
+    padding-right: 10px;
+    scroll-behavior: smooth;
+}
+
+.content ::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+}
+
+.content ::-webkit-scrollbar-track{
+background-color: var(--accent-04);
+}
+
+.content ::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+    
+
 .content p{
     line-height: 1.5;
     font-size: 18px;
@@ -232,6 +261,7 @@ section{
     color: var(--accent-02);
     line-height: 1.2;
     font: 15px;
+   
 }
 
 
@@ -242,11 +272,11 @@ section{
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     gap: 10px;
     color: var(--accent-02);
+    font-weight: 600;
 }
 .skills > div:nth-child(7) {
     grid-column: 3 / 5;
 }
-
 
 
 .skills > div{
@@ -328,7 +358,46 @@ section{
 
 
 
+/*-----experience-----*/
+.experience {
+    margin: 15px 0;
+}
 
+
+.experience p {
+    padding-left: 20px ;
+    border-left: var(--accent-02) 2px solid;
+    margin-left: 17px;
+    color: var(--accent-02);
+}
+
+.experience h4{
+    padding-left: 25px ;
+    position: relative;
+    color: var(--primary-color);
+    margin: 10px;
+}
+
+.experience h4::before{
+    content: "";
+    position: absolute;
+    background-color: var(--primary-color);
+    width: 14px;
+    height: 14px;
+    border-radius: 20px;
+    left: 0;
+    top: 5px;
+}
+
+.experience .date{
+    padding: 5px 10px ;
+    background-color: var(--accent-04);
+    border-radius: 4px ;
+    color: var(--accent-02);
+    margin-top: 20px;
+    font-size: 14px ;
+    font-weight: 400;
+}
 
 /*Desktop*/
 @media screen and (width >= 1024px) {
@@ -359,6 +428,30 @@ section{
         grid-column: 1/4;
        }
 }
+
+/*contributions*/
+.contributions{
+    display: grid;;
+    grid-template-columns: 1fr;
+    border: var(--accent-04) 3px solid;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.contributions activity-graph{
+    padding: 10px 20px;
+    color: var(--accent-02);
+}
+.contributions > div{
+    overflow: auto;
+}
+
+.contributions figure{
+    overflow: hidden;
+}
+
+
+
 
 
 @media screen and (width <= 769px) {
