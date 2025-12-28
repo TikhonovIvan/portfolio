@@ -29,7 +29,7 @@
           </div>
         </div>
         <div class="box nav">
-          <div class="item active">
+          <div class="item">
             <a href="#about">
               <ion-icon name="person-circle-outline"></ion-icon>
               <p>about</p>
@@ -48,16 +48,16 @@
               <ion-icon name="file-tray-stacked-outline"></ion-icon>
               <p>project</p>
             </a>
-            <div class="divider ltr"></div>
+            <div class="divider ltr none"></div>
           </div>
-          <div class="item">
+          <div class="item none">
             <a href="#blogs">
               <ion-icon name="reader-outline"></ion-icon>
               <p>blogs</p>
             </a>
             <div class="divider ltr"></div>
           </div>
-          <div class="item">
+          <div class="item none">
             <a href="contact">
               <ion-icon name="newspaper-outline"></ion-icon>
               <p>contact</p>
@@ -108,7 +108,9 @@
       <!-- Contact -->
       <div class="box content">
         <div class="wrapper">
-          <h2>Привет <span class="colored">друг! </span>&#128075;</h2>
+          <h2 id="about">
+            Привет <span class="colored">друг! </span>&#128075;
+          </h2>
           <div class="divider ltr"></div>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime
@@ -184,7 +186,7 @@
           </section>
 
           <!-- Experience -->
-          <h1>My <span class="colored">Experience</span></h1>
+          <h1 id="resume">My <span class="colored">Experience</span></h1>
           <div class="divider ltr"></div>
           <section class="experience">
             <div class="experience">
@@ -232,6 +234,33 @@
               </div>
             </section>
           </div>
+
+          <!-- Project -->
+
+          <h1 id="project">Мои <span class="colored">Проекты </span></h1>
+          <div class="divider ltr"></div>
+
+          <section class="projects">
+            <div class="project-1">
+              <img src="./img/cover.jpg" alt="" />
+              <h3>Project <span class="colored">Title-1</span></h3>
+            </div>
+
+            <div class="project-2">
+              <img src="./img/cover.jpg" alt="" />
+              <h3>Project <span class="colored">Title-2</span></h3>
+            </div>
+
+            <div class="project-3">
+              <img src="./img/cover.jpg" alt="" />
+              <h3>Project <span class="colored">Title-3</span></h3>
+            </div>
+
+            <div class="project-4">
+              <img src="./img/cover.jpg" alt="" />
+              <h3>Project <span class="colored">Title-4</span></h3>
+            </div>
+          </section>
         </div>
       </div>
     </div>

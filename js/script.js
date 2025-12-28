@@ -26,3 +26,28 @@ function theme(){
         lightBtn.style.display =  'block';
     }
 }
+
+
+const headers = document.querySelectorAll('.box.content h2[id]');
+const navItems = document.querySelectorAll('.navbar .nav .item');
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      navItems.forEach(item => item.classList.remove('active'));
+
+      const link = document.querySelector(
+        `.navbar a[href="#${entry.target.id}"]`
+      );
+
+      link?.closest('.item')?.classList.add('active');
+    });
+  },
+  {
+    rootMargin: '-40% 0px -50% 0px'
+  }
+);
+
+headers.forEach(h => observer.observe(h));
