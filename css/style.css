@@ -524,22 +524,22 @@ body.light .projects h3{
 
 
 
-@media screen and (width <= 769px) {
+@media screen and (width <= 767px) {
     .container{
-      grid-template-columns: 1fr;  
-      max-width: 500px;
-      padding: 20px ;
+      padding: 10px ;
       padding-top: 50px;
     }
     .navbar{
         display: inline-grid;
         grid-template-columns: 85px 1fr;
+        
     }
 
     .nav{
         display: inline-grid;
         grid-template-columns:  1fr 1fr 1fr ;
         padding: 5px;
+        
     }
     .nav .divider, .nav p{
         display: none;
@@ -574,9 +574,30 @@ body.light .projects h3{
           "p4 ";
     }
 
-    
-
 }
 
 
 
+
+
+@media screen and (width <= 426px) {
+ .container{
+    
+      padding-top: 30px;
+    }
+    .navbar{
+        
+        top: 30px;
+    }
+   .profile {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.profile.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+ 
+}
