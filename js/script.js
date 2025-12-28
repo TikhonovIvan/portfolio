@@ -31,7 +31,7 @@ function theme(){
 const profile = document.querySelector('.profile');
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 550) {
+  if (window.scrollY > 520) {
     profile.classList.add('hidden');
   } else {
     profile.classList.remove('hidden');
