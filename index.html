@@ -14,7 +14,7 @@
     ></script>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body class="">
+  <body>
     <div class="container">
       <!-- NavBar -->
       <nav class="navbar">
@@ -28,25 +28,32 @@
             ></ion-icon>
           </div>
         </div>
+        <div class="box languages">
+          <div class="language" id="langToggle">
+            <p class="ru">RU</p>
+            <p class="en none">EN</p>
+          </div>
+        </div>
+
         <div class="box nav">
           <div class="item">
             <a href="#about">
               <ion-icon name="person-circle-outline"></ion-icon>
-              <p>about</p>
+              <p data-i18n="nav.about">About</p>
             </a>
             <div class="divider ltr"></div>
           </div>
           <div class="item">
             <a href="#resume">
               <ion-icon name="file-tray-full-outline"></ion-icon>
-              <p>resume</p>
+              <p data-i18n="nav.resume">resume</p>
             </a>
             <div class="divider ltr"></div>
           </div>
           <div class="item">
             <a href="#project">
               <ion-icon name="file-tray-stacked-outline"></ion-icon>
-              <p>project</p>
+              <p data-i18n="nav.project">project</p>
             </a>
             <div class="divider ltr none"></div>
           </div>
@@ -70,7 +77,7 @@
       <div class="box profile">
         <img class="header" src="./img/cover.jpg" alt="" />
         <img class="img" src="./img/wp5146890.jpg" alt="" />
-        <h2>Тихонов Иван</h2>
+        <h2 data-i18n="profile.name">Тихонов Иван</h2>
         <p id="typed" class="colored">PHP Laravel Developer</p>
 
         <ul>
@@ -91,13 +98,15 @@
           <table>
             <tr>
               <td>
-                <a href=""
-                  >Моё резюме <ion-icon name="file-tray-full-outline"></ion-icon
+                <a href="#" class="email"
+                  ><span data-i18n="footer.resume"> Моё резюме</span>
+                  <ion-icon name="file-tray-full-outline"></ion-icon
                 ></a>
               </td>
               <td>
-                <a href=""
-                  >Мои контакты <ion-icon name="call-outline"></ion-icon
+                <a href="#" class="email"
+                  ><span data-i18n="footer.email">Моя почта</span>
+                  <ion-icon name="mail-outline"></ion-icon
                 ></a>
               </td>
             </tr>
@@ -264,7 +273,9 @@
         </div>
       </div>
     </div>
+    <script src="https://unpkg.com/i18next@23.4.6/i18next.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
     <script src="./js/script.js"></script>
   </body>
 </html>

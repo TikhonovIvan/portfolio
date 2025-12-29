@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "about": "About",
+    "resume": "Resume",
+    "project": "Projects"
+  },
+
+   "profile":{
+    "name": "Tikhonov Ivan"
+  },
+  
+    "footer": {
+    "resume": "My resume",
+    "email": "My mail"
+  }
+}
