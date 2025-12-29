@@ -39,8 +39,11 @@ window.addEventListener('scroll', () => {
 });
 
 
+
+// Получаем текущий язык из localStorage или по умолчанию RU
 let currentLang = localStorage.getItem('lang') || 'ru';
 
+// Подгружаем переводы
 Promise.all([
   fetch('/locales/ru.json').then(res => res.json()),
   fetch('/locales/en.json').then(res => res.json())
@@ -55,28 +58,39 @@ Promise.all([
     }
   }, updateContent);
 
+  // Инициализация UI кнопки после загрузки переводов
+  updateLangUI();
 });
 
-// обновление текста
+// Кнопка языка
+const langToggle = document.getElementById('langToggle');
+
+// Обновление текста на странице
 function updateContent() {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     el.textContent = i18next.t(el.dataset.i18n);
   });
 }
 
-// кнопка языка (одна строка)
-document.getElementById('langToggle').addEventListener('click', () => {
+// Переключение видимого языка на кнопке
+function updateLangUI() {
+  const ruSpan = langToggle.querySelector('.ru');
+  const enSpan = langToggle.querySelector('.en');
+  ruSpan.classList.toggle('none', currentLang !== 'ru');
+  enSpan.classList.toggle('none', currentLang !== 'en');
+}
+
+// Функция переключения языка
+function toggleLang() {
   currentLang = currentLang === 'ru' ? 'en' : 'ru';
   i18next.changeLanguage(currentLang, updateContent);
   updateLangUI();
   localStorage.setItem('lang', currentLang);
-});
-
-// UI кнопки
-function updateLangUI() {
-  document.querySelector('.ru').classList.toggle('none', currentLang !== 'ru');
-  document.querySelector('.en').classList.toggle('none', currentLang !== 'en');
 }
 
-updateLangUI();
-
+// Обработка клика и тача для мобильных
+langToggle.addEventListener('click', toggleLang);
+langToggle.addEventListener('touchstart', (e) => {
+  e.preventDefault(); // предотвращает выделение текста
+  toggleLang();
+});

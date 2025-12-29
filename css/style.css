@@ -54,7 +54,8 @@ body.light {
   cursor: pointer;
   background: none;
   border: none;
-  padding: 8px 12px;
+  width: 100%;
+  height: 100%; /* увеличиваем область тапа */
   font-size: 18px;
   font-weight: 600;
   color: inherit;
@@ -63,13 +64,15 @@ body.light {
   -webkit-user-select: none;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
+
+  display: inline-flex; /* чтобы span занимали всю область */
+  align-items: center;
+  justify-content: center;
 }
 
 .language span {
   display: inline-block;
   vertical-align: middle;
-  font-size: 18px;
-  font-weight: 600;
 }
 
 .none {
