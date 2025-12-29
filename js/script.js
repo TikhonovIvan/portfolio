@@ -39,16 +39,14 @@ window.addEventListener('scroll', () => {
 });
 
 
-
-// Получаем текущий язык из localStorage или по умолчанию RU
+// Текущий язык
 let currentLang = localStorage.getItem('lang') || 'ru';
 
-// Подгружаем переводы
+// Подгрузка переводов
 Promise.all([
   fetch('/locales/ru.json').then(res => res.json()),
   fetch('/locales/en.json').then(res => res.json())
 ]).then(([ru, en]) => {
-
   i18next.init({
     lng: currentLang,
     fallbackLng: 'ru',
@@ -58,7 +56,7 @@ Promise.all([
     }
   }, updateContent);
 
-  // Инициализация UI кнопки после загрузки переводов
+  // обновляем кнопку после инициализации i18next
   updateLangUI();
 });
 
@@ -72,12 +70,10 @@ function updateContent() {
   });
 }
 
-// Переключение видимого языка на кнопке
+// Обновление видимого языка на кнопке
 function updateLangUI() {
-  const ruSpan = langToggle.querySelector('.ru');
-  const enSpan = langToggle.querySelector('.en');
-  ruSpan.classList.toggle('none', currentLang !== 'ru');
-  enSpan.classList.toggle('none', currentLang !== 'en');
+  langToggle.querySelector('.ru').classList.toggle('none', currentLang !== 'ru');
+  langToggle.querySelector('.en').classList.toggle('none', currentLang !== 'en');
 }
 
 // Функция переключения языка
@@ -88,9 +84,8 @@ function toggleLang() {
   localStorage.setItem('lang', currentLang);
 }
 
-// Обработка клика и тача для мобильных
+// ✅ Главное: только click — работает на всех мобильных
 langToggle.addEventListener('click', toggleLang);
-langToggle.addEventListener('touchstart', (e) => {
-  e.preventDefault(); // предотвращает выделение текста
-  toggleLang();
-});
+
+// Инициализация UI при загрузке
+updateLangUI();
