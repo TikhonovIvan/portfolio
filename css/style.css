@@ -57,30 +57,20 @@ body.light {
   padding: 12px 16px; /* увеличиваем область тапа */
   font-size: 18px;
   font-weight: 600;
-  color: inherit;
+  color: var(--primary-color);
 
   display: inline-flex; /* flex для выравнивания */
   align-items: center;
   justify-content: center;
-
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
 }
 
 .language span {
   display: inline-block;
   vertical-align: middle;
-  pointer-events: none; /* ВАЖНО: спаны не перехватывают клики */
 }
 
 .none {
   display: none !important;
-}
-
-.language span:hover {
-  color: var(--primary-color);
 }
 
 /*------NavBAr------*/
