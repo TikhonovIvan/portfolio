@@ -58,12 +58,20 @@ body.light {
   font-size: 18px;
   font-weight: 600;
   color: inherit;
+  /* мобильные фиксы */
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
 .language span {
   font-size: 18px;
   font-weight: 600;
-  margin-top: 6px;
+  display: inline-block; /* важно, чтобы margin-top не ломал тач */
+  vertical-align: middle; /* выравниваем по центру */
+}
+.none {
+  display: none !important;
 }
 
 .language span:hover {
