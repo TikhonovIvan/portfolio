@@ -43,8 +43,8 @@ let currentLang = localStorage.getItem('lang') || 'ru';
 
 // Подгружаем переводы
 Promise.all([
-  fetch('/locales/ru.json').then(res => res.json()),
-  fetch('/locales/en.json').then(res => res.json())
+  fetch('./locales/ru.json').then(res => res.json()),
+  fetch('./locales/en.json').then(res => res.json())
 ]).then(([ru, en]) => {
   i18next.init({
     lng: currentLang,
