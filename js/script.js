@@ -39,10 +39,9 @@ window.addEventListener('scroll', () => {
 });
 
 
-// Текущий язык
 let currentLang = localStorage.getItem('lang') || 'ru';
 
-// Подгрузка переводов
+// Подгружаем переводы
 Promise.all([
   fetch('/locales/ru.json').then(res => res.json()),
   fetch('/locales/en.json').then(res => res.json())
@@ -56,7 +55,6 @@ Promise.all([
     }
   }, updateContent);
 
-  // обновляем кнопку после инициализации i18next
   updateLangUI();
 });
 
@@ -76,7 +74,7 @@ function updateLangUI() {
   langToggle.querySelector('.en').classList.toggle('none', currentLang !== 'en');
 }
 
-// Функция переключения языка
+// Переключение языка
 function toggleLang() {
   currentLang = currentLang === 'ru' ? 'en' : 'ru';
   i18next.changeLanguage(currentLang, updateContent);
@@ -84,8 +82,8 @@ function toggleLang() {
   localStorage.setItem('lang', currentLang);
 }
 
-// ✅ Главное: только click — работает на всех мобильных
+// Только click — работает на всех устройствах
 langToggle.addEventListener('click', toggleLang);
 
-// Инициализация UI при загрузке
+// Инициализация UI
 updateLangUI();
