@@ -50,11 +50,13 @@ body.light {
 }
 
 /* language*/
+.language {
+  cursor: pointer;
+}
 .language p {
   font-size: 18px;
   font-weight: 600;
   margin-top: 6px;
-  cursor: pointer;
 }
 
 .language p:hover {
