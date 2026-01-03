@@ -5,12 +5,22 @@
     "project": "Projects"
   },
 
-   "profile":{
+  "profile": {
     "name": "Tikhonov Ivan"
   },
-  
-    "footer": {
+
+  "footer": {
     "resume": "My resume",
     "email": "My mail"
+  },
+  "about": {
+    "me": "I'm a full-stack PHP developer, developing reliable, scalable, and user-friendly web applications. I have experience working with both the client-side and server-side, from responsive layouts to creating interfaces for implementing business logic and interacting with databases.",
+    "me2": "I use PHP, Laravel, and SQL for server-side development and modern technologies to create user-friendly interfaces. I work with Git, adhere to MVC and REST principles, and focus on application security."
+  },
+  "wrapper": {
+    "hi": "Hello",
+    "friend": "friend!",
+    "my_name": "My name ",
+    "name": "Ivan"
   }
 }

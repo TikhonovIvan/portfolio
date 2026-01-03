@@ -1,7 +1,7 @@
 //Typed animation
 
 var typed = new Typed("#typed",{
-    strings: ["Full-Stack Web Developer","PHP Developer", "Laravel Developer"],
+    strings: ["Full-Stack Web Developer","PHP Developer", " Developer"],
     typeSpeed: 70,
     backSpeed: 20,
     backDelay: 3000,
@@ -37,4 +37,6 @@ window.addEventListener('scroll', () => {
     profile.classList.remove('hidden');
   }
 });
+
+
 

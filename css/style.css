@@ -187,6 +187,7 @@ body.light {
 .profile ion-icon:hover {
   color: var(--primary-color);
 }
+
 .footer table tr {
   display: flex;
   justify-content: space-between;
