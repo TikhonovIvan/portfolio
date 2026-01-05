@@ -12,6 +12,11 @@
       type="module"
       src="https://cdn.jsdelivr.net/npm/@mariohamann/activity-graph/dist/activity-graph.min.js"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -75,7 +80,7 @@
 
       <!-- Profile  -->
       <div class="box profile">
-        <img class="header" src="./img/cover.jpg" alt="" />
+        <img id="slider" class="header" src="./img/cover-1.jpg" alt="" />
         <img class="img" src="./img/wp5146890.jpg" alt="" />
         <h2 data-i18n="profile.name">Тихонов Иван</h2>
         <p id="typed" class="colored">PHP Developer</p>
@@ -127,7 +132,7 @@
       <div class="box content">
         <div class="wrapper">
           <h2 id="about">
-            <span data-i18n="wrapper.hi">Приветs</span>
+            <span data-i18n="wrapper.hi">Привет</span>
             <span class="colored" data-i18n="wrapper.friend">друг!</span>
             <span data-i18n="wrapper.my_name">Меня зовут </span
             ><span class="colored" data-i18n="wrapper.name"> Иван </span
@@ -153,16 +158,16 @@
           <!-- Achivements -->
           <section class="achivements">
             <div>
-              <h3><ion-icon name="layers-outline"></ion-icon>50+</h3>
-              <p>Дизайнер сайтов</p>
-            </div>
-            <div>
-              <h3><ion-icon name="briefcase-outline"></ion-icon>3+</h3>
+              <h3><ion-icon name="briefcase-outline"></ion-icon>4+</h3>
               <p>Года опты</p>
             </div>
             <div>
-              <h3><ion-icon name="rocket-outline"></ion-icon>40</h3>
+              <h3><ion-icon name="rocket-outline"></ion-icon>10+</h3>
               <p>Завершенных проектов</p>
+            </div>
+            <div>
+              <h3><ion-icon name="layers-outline"></ion-icon>5+</h3>
+              <p>Дизайнер сайтов</p>
             </div>
           </section>
 
@@ -180,7 +185,11 @@
               <p>CSS</p>
             </div>
             <div>
-              <ion-icon name="logo-css3"></ion-icon>
+              <ion-icon name="logo-sass"></ion-icon>
+              <p>sass</p>
+            </div>
+            <div>
+              <ion-icon name="logo-nodejs"></ion-icon>
               <p>JS</p>
             </div>
             <div>
@@ -189,18 +198,60 @@
             </div>
 
             <div>
-              <div class="circle" style="--percent: 65%">
-                <h4>65<small>%</small></h4>
-              </div>
-              <p>MySQL</p>
+              <i class="bi bi-bootstrap icon"></i>
+              <!-- <img src="./img/bootstrap-5.svg" class="castom" alt="" /> -->
+              <p>Bootstrap</p>
+            </div>
+
+            <div>
+              <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+              <svg
+                fill="#4fc6ce"
+                width="32px"
+                height="32px"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                xml:space="preserve"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 6.036c-2.667 0-4.333 1.325-5 3.976 1-1.325 2.167-1.822 3.5-1.491.761.189 1.305.738 1.906 1.345C13.387 10.855 14.522 12 17 12c2.667 0 4.333-1.325 5-3.976-1 1.325-2.166 1.822-3.5 1.491-.761-.189-1.305-.738-1.907-1.345-.98-.99-2.114-2.134-4.593-2.134zM7 12c-2.667 0-4.333 1.325-5 3.976 1-1.326 2.167-1.822 3.5-1.491.761.189 1.305.738 1.907 1.345.98.989 2.115 2.134 4.594 2.134 2.667 0 4.333-1.325 5-3.976-1 1.325-2.167 1.822-3.5 1.491-.761-.189-1.305-.738-1.906-1.345C10.613 13.145 9.478 12 7 12z"
+                />
+              </svg>
+
+              <p>TailwindCSS</p>
             </div>
             <div>
+              <ion-icon name="logo-tux"></ion-icon>
+
+              <p>Linux</p>
+            </div>
+            <div>
+              <ion-icon name="logo-docker"></ion-icon>
+              <p>Docker</p>
+            </div>
+
+            <div>
+              <ion-icon name="logo-wordpress"></ion-icon>
+              <p>wordpress</p>
+            </div>
+            <div>
+              <ion-icon name="logo-figma"></ion-icon>
+              <p>figma</p>
+            </div>
+            <div>
+              <ion-icon name="logo-github"></ion-icon>
+              <p>github</p>
+            </div>
+
+            <!-- <div>
               <div class="circle" style="--percent: 50%">
                 <h4>85<small>%</small></h4>
               </div>
               <p>MySQL</p>
-            </div>
-            <div>
+            </div> -->
+            <!-- <div>
               <div class="progress-bar">
                 <p>Node JS <span>90%</span></p>
                 <progress max="100" value="90"></progress>
@@ -209,7 +260,7 @@
                 <p>Laravel <span>75%</span></p>
                 <progress max="100" value="75"></progress>
               </div>
-            </div>
+            </div> -->
           </section>
 
           <!-- Experience -->

@@ -40,3 +40,34 @@ window.addEventListener('scroll', () => {
 
 
 
+// Смена картинки каждые 3 сек
+
+const images = [
+  './img/cover-1.jpg',
+  './img/cover-2.jpg',
+  './img/cover-3.jpg',
+];
+
+let index = 0;
+const slider = document.getElementById('slider');
+
+// 🔹 Предзагрузка картинок
+images.forEach(src => {
+  const img = new Image();
+  img.src = src;
+});
+
+setInterval(() => {
+  // fade out
+  slider.style.opacity = 0;
+
+  setTimeout(() => {
+    index = (index + 1) % images.length;
+    slider.src = images[index];
+
+    // небольшая задержка перед fade in
+    requestAnimationFrame(() => {
+      slider.style.opacity = 1;
+    });
+  }, 2000); // равно transition
+}, 6000);
