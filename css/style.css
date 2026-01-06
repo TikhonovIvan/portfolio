@@ -385,6 +385,68 @@ section {
   background-color: var(--primary-color);
 }
 
+/*-----courses-----*/
+.course {
+  display: flex;
+  justify-content: space-between;
+
+  align-self: start;
+  gap: 10px;
+}
+
+.course img {
+  width: 100px;
+  height: auto;
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.image-wrapper img {
+  width: 150px;
+  display: block;
+  border-radius: 3px;
+}
+
+/* Иконка лупы */
+.zoom-icon {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--primary-color);
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+/* hover */
+.image-wrapper:hover .zoom-icon {
+  opacity: 1;
+  border-radius: 3px;
+}
+
+/* Lightbox */
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
 /*-----experience-----*/
 .experience {
   margin: 15px 0;
@@ -515,9 +577,9 @@ body.light .projects h3 {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .skills div:nth-child(7) {
+  /* .skills div:nth-child(7) {
     grid-column: 1/4;
-  }
+  } */
   .projects {
     grid-template-areas:
       "p1 "

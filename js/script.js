@@ -71,3 +71,24 @@ setInterval(() => {
     });
   }, 2000); // равно transition
 }, 6000);
+
+
+
+
+
+  const wrappers = document.querySelectorAll(".image-wrapper");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  wrappers.forEach(wrapper => {
+    wrapper.addEventListener("click", () => {
+      const img = wrapper.querySelector("img");
+      lightboxImg.src = img.src;
+      lightbox.style.display = "flex";
+    });
+  });
+
+  // закрытие по клику
+  lightbox.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
